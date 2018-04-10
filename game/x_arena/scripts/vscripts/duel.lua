@@ -11,7 +11,7 @@ function DuelStart(tHeroesRadiant, tHeroesDire)
 	for _,hero in pairs(tHeroesRadiant) do
 		if hero ~= nil and not hero:IsNull() and IsValidEntity(hero) and hero:IsRealHero() and hero:IsAlive() and IsConnected(hero) then
 			CustomInterruptCheck(hero)
-			FindClearSpaceForUnit(hero, DUEL_POINT_RADIANT, false)
+			FindClearSpaceForUnit(hero, DUEL_POINT_RADIANT, true)
 
 			local pid = hero:GetPlayerOwnerID()
 			PlayerResource:SetCameraTarget(pid, hero)
@@ -30,7 +30,7 @@ function DuelStart(tHeroesRadiant, tHeroesDire)
 	for _,hero in pairs(tHeroesDire) do
 		if hero ~= nil and not hero:IsNull() and IsValidEntity(hero) and hero:IsRealHero() and hero:IsAlive() and IsConnected(hero) then
 			CustomInterruptCheck(hero)
-			FindClearSpaceForUnit(hero, DUEL_POINT_DIRE, false)
+			FindClearSpaceForUnit(hero, DUEL_POINT_DIRE, true)
 
 			local pid = hero:GetPlayerOwnerID()
 			PlayerResource:SetCameraTarget(pid, hero)

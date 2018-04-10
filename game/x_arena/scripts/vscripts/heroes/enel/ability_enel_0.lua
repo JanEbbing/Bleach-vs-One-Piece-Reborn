@@ -11,7 +11,7 @@ function Blink(keys)
 		point = casterPos + (point - casterPos):Normalized() * range
 	end
 
-	FindClearSpaceForUnit(caster, point, false)
+	FindClearSpaceForUnit(caster, point, true)
 	ProjectileManager:ProjectileDodge(caster)
 
 	local casterPosB = caster:GetAbsOrigin()
